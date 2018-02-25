@@ -2,10 +2,10 @@ const EthereumTx = require('ethereumjs-tx')
 const privateKey = Buffer.from('d90b721461bda3adb40e5967e26bc90627b4ec30b2afee383e6b2b3103bc926e', 'hex')
 
 const txParams = {
-  nonce: '0x00',
+  nonce: '0x02',
   gasPrice: '0x174876e800', 
   gasLimit: '0x100000',
-  to: '', 
+  to: '0x0000000000000000000000000000000000000420',
   value: '0xa', 
   data: '',
   chainId: 66
