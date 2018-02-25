@@ -1,0 +1,3 @@
+[submodule "libb2"]
+	path = libb2
+	url = https://github.com/blake2/libb2
