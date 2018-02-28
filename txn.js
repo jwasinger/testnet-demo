@@ -10,7 +10,7 @@ const txParams = {
   gasLimit: '0x100000',
   to: '',
   value: '0xa', 
-  data: data,
+  data: '0x'+data,
   chainId: 66
 }
 
