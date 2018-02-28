@@ -5,8 +5,6 @@
 CONTRACT_WASM="$(cat $1 | xxd -p -c 100000)"
 let WASM_SIZE=${#CONTRACT_WASM}/2
 
-echo $CONTRACT_WASM
-
 echo "(module \
 	(import \"ethereum\" \"return\" (func \$return (param i32 i32))) \
 	(memory 1) \
