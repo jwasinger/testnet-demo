@@ -1,3 +1,6 @@
 [submodule "libb2"]
 	path = libb2
 	url = https://github.com/blake2/libb2
+[submodule "endian-swap"]
+	path = endian-swap
+	url = https://github.com/jwasinger/endian-swap
