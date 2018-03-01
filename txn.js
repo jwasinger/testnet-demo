@@ -3,12 +3,14 @@ const privateKey = Buffer.from('d90b721461bda3adb40e5967e26bc90627b4ec30b2afee38
 const argv = require('yargs').argv;
 
 let data = argv.data ? argv.data : ''
+let nonce = argv.nonce ? argv.nonce : ''
+let to = argv.to ? argv.to : ''
 
 const txParams = {
-  nonce: '0x00',
+  nonce: '0x'+nonce,
   gasPrice: '0x174876e800', 
   gasLimit: '0x100000',
-  to: '',
+  to: to,
   value: '0xa', 
   data: '0x'+data,
   chainId: 66
