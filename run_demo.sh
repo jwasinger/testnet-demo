@@ -10,7 +10,7 @@ let nonce=$nonce+1
 
 sleep 15s
 
-./generate_call_wasm.sh $address
+./generate_call_wasm.sh
 ./generate_init_wasm.sh txn-wasm.wasm
 ./sendTx.sh $nonce
 

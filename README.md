@@ -5,6 +5,8 @@ git submodule update --init
 ```
 
 ## Usage
+Have a running CPP/Hera node
+
 Build C code (currently `blake2b.c`)
 ```
 ./build.sh
