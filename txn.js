@@ -17,7 +17,7 @@ console.log(data)
 const txParams = {
   nonce: '0x'+nonce,
   gasPrice: '0x174876e800', 
-  gasLimit: '0x100000',
+  gasLimit: '4000000',
   to: to,
   value: '0xa', 
   data: '0x'+data,
