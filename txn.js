@@ -12,12 +12,10 @@ if (data) {
   data = fs.readFileSync(data).toString('hex')
 }
 
-console.log(data)
-
 const txParams = {
   nonce: '0x'+nonce,
   gasPrice: '0x174876e800', 
-  gasLimit: '4000000',
+  gasLimit: '0x500000',
   to: to,
   value: '0xa', 
   data: '0x'+data,
