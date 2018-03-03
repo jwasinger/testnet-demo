@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jwasinger/testnet-demo#readme",
   "dependencies": {
     "ethereumjs-tx": "^1.3.3",
+    "request": "^2.83.0",
     "yargs": "^11.0.0"
   }
 }

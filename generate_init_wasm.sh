@@ -13,8 +13,8 @@ trap 'rm -f -- "$TMP_FILE"' INT TERM HUP EXIT
 echo "(module \
 	(import \"ethereum\" \"return\" (func \$return (param i32 i32))) \
   (import \"debug\" \"printMemHex\" (func \$printMemHex (param i32 i32))) \
-	(memory 1) \
-  (data (i32.const 100)  \"$(python endian-swap/swap.py $CONTRACT_WASM)\") \
+	(memory 100) \
+  (data (i32.const 100)  \"$(python endian-swap/swap.py $1)\") \
 	(export \"main\" (func \$main)) \
 	(func \$main \
     (call \$printMemHex (i32.const 0) (i32.const $WASM_SIZE)) \

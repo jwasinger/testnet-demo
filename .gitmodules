@@ -4,3 +4,6 @@
 [submodule "endian-swap"]
 	path = endian-swap
 	url = https://github.com/jwasinger/endian-swap
+[submodule "rust-ewasm"]
+	path = rust-ewasm
+	url = https://github.com/jwasinger/rust-ewasm
