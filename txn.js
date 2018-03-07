@@ -9,16 +9,16 @@ let nonce = argv.nonce ? argv.nonce : ''
 let to = argv.to ? argv.to : ''
 
 if (data) {
-  data = fs.readFileSync(data).toString('hex')
+  data = '0x'+fs.readFileSync(data).toString('hex')
 }
 
 const txParams = {
   nonce: '0x'+nonce,
   gasPrice: '0x174876e800', 
-  gasLimit: '0x500000',
+  gasLimit: '0x70000000',
   to: to,
   value: '0xa', 
-  data: '0x'+data,
+  data: data,
   chainId: 66
 }
 
