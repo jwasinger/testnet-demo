@@ -8,8 +8,8 @@ trap 'rm -f -- "$TMP_FILE"' INT TERM HUP EXIT
 
 echo " \
   (module \
-    (import \"ethereum\" \"call\" (func \$call (param i64 i32 i32 i32 i32 i32 i32) (result i32))) \
-    (import  \"ethereum\" \"getBalance\"  (func \$getBalance (param i32 i32))) \
+    (import \"ethereum\" \"call\" (func \$call (param i64 i32 i32 i32 i32) (result i32))) \
+    (import  \"ethereum\" \"getExternalBalance\"  (func \$getBalance (param i32 i32))) \
     (import \"ethereum\" \"storageStore\" (func \$storageStore (param i32 i32))) \
     (import \"ethereum\" \"getAddress\" (func \$getAddress (param i32))) \
     (import \"debug\" \"printMemHex\" (func \$printMemHex (param i32 i32))) \
@@ -23,7 +23,7 @@ echo " \
       (call \$printMemHex (i32.const 52) (i32.const 4)) \
       (call \$printMemHex (i32.const 56) (i32.const 4)) \
       (drop  \
-        (call \$call (i64.const 200000) (i32.const 0) (i32.const 20) (i32.const 52) (i32.const 4) (i32.const 56) (i32.const 4) ) ) \
+        (call \$call (i64.const 200000) (i32.const 0) (i32.const 20) (i32.const 52) (i32.const 4)) ) \
     ) \
   )" > $TMP_FILE
 

@@ -25,7 +25,7 @@ const txParams = {
 let tx = new EthereumTx(txParams)
 tx.sign(privateKey)
 let serializedTx = tx.serialize()
-serializedTx = serializedTx.toString('hex')
+serializedTx = "0x"+serializedTx.toString('hex')
 
 var options = {
   uri: 'http://localhost:8545',
@@ -39,7 +39,6 @@ var options = {
     ]
   }
 };
-
 
 request(options, function (error, response, body) {
   if (!error && response.statusCode == 200) {
